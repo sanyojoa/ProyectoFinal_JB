@@ -7,4 +7,10 @@ app-social{
     float: right;
     margin-top: 3px;
 }
-
+@media(max-width: 575px){
+    .social{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    }
+}

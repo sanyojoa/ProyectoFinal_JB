@@ -2,3 +2,9 @@
     width: 150px;
     margin-top: 3px;
 }
+
+@media (max-width: 575px){
+    .logoAP{
+        margin: 30px;
+    }
+}
