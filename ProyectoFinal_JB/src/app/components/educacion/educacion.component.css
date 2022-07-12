@@ -8,3 +8,7 @@ div{
 h2,h3{
     display: inline;
 }
+h1{
+    text-shadow: 8px 3px 5px #01b7ff;
+    font-weight: bold;
+}

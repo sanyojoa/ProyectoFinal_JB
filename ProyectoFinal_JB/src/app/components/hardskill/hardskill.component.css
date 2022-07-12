@@ -2,3 +2,7 @@
     background: #eee;
     padding: 20px;
 }
+h1{
+    text-shadow: 8px 3px 5px #01b7ff;
+    font-weight: bold;
+}
