@@ -3,8 +3,12 @@
 }
 
 div{
-    background: #666;
+    background: #eee;
 }
 h2,h3{
     display: inline;
+}
+h1{
+    text-shadow: 5px 5px 5px #5282e7;
+    font-family: 'Trebuchet MS', sans-serif;
 }
