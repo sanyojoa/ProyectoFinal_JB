@@ -1,13 +1,13 @@
-package com.jb.ap;
+package com.portfolio.jb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ApApplication {
+public class JbApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ApApplication.class, args);
+		SpringApplication.run(JbApplication.class, args);
 	}
 
 }
