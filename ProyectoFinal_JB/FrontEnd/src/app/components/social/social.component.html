@@ -3,5 +3,6 @@
     <a href="#"><img src="../../../assets/bootstrap-icons-1.8.3/github.svg"></a>
     <a href="#"><img src="../../../assets/bootstrap-icons-1.8.3/facebook.svg"></a>
     <a href="#"><img src="../../../assets/bootstrap-icons-1.8.3/instagram.svg"></a>
-    <button type="button" class="btn btn-dark" (click)="login()">INGRESAR</button>
+    <button type="button" class="btn btn-dark" (click)="login()" *ngIf="!isLoged">INGRESAR</button>
+    <button type="button" class="btn btn-dark" (click)="onLogOut()" *ngIf="isLoged">SALIR</button>
 </div>
