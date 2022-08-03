@@ -1,9 +1,21 @@
 img{
-    width: 50px;
+    width: 45px;
 }
 div a,button{
-    margin: 5px;
+    margin: 12px;
     border: none;
+}
+
+img:hover{
+    border:solid 4px #01b7ff;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.git:hover{
+    border: solid 4px #01b7ff;
+    border-radius: 50%;
+    transition: 0.4s;
 }
 
 button:hover{
