@@ -2,16 +2,33 @@
     padding: 20px;
     background: #eee;
 }
-.contenedor{
-    width: auto;
+.col-lg-2{
+    margin: auto;
 }
-.parte1, .parte2{
-    display: inline-block;
-    text-align: justify;
-}
+
 .img-proyecto{
     box-shadow: 20px 10px 20px #4ef;
-    width: 100vh;
+    margin: 20px; 
+}
+@media (max-width: 450px){
+    .img-proyecto{
+        width: 30vh;
+    }
+}
+@media (min-width: 451px){
+    .img-proyecto{
+        width: 50vh;
+    }
+}
+@media (min-width: 776px){
+    .img-proyecto{
+        width: 60vh;
+    }
+}
+@media (min-width: 1000px){
+    .img-proyecto{
+        width: 100vh;
+    }
 }
 
 h1{
