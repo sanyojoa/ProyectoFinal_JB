@@ -1,14 +1,29 @@
 <div class="row">
-    <h1 class="font1">PROYECTOS REALIZADOS</h1>
-    <div class="contenedor">
-        <div class="col-sm-12 col-md-7- col-lg-7 parte1">
-            <h2 class="font2">Encriptador</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, neque expedita perspiciatis
-                consectetur totam quibusdam cum vel placeat soluta distinctio nostrum incidunt, laborum facilis dolorum
-                molestias assumenda vero asperiores aspernatur!</p>
-        </div>
-        <div class="col-sm-12 col-md-2- col-lg-3  offset-lg-1 parte2">
-            <img src="../../../assets/portfolio.png" class="img-fluid img-proyecto">
-        </div>
+    <h1 class="font1">PROYECTOS</h1>
+    <div class="col-lg-1"></div>
+    <div class="col-lg-11">
+        <ul *ngFor="let Proyecto of proyecto">
+            <li>
+                <h2 class="font2">{{Proyecto.nombreP}}</h2>
+            </li>
+            <p>{{Proyecto.descripcionP}}</p>
+            <img src="{{Proyecto.imgP}}" class="img-proyecto">
+            <p *ngIf="isLoged">
+                <button class="btn btn-dark btn-sm" routerLink="/editpro/{{Proyecto.id}}">
+                    <i class="bi bi-pencil-fill"></i> EDITAR
+                </button>
+            </p>
+            <p *ngIf="isLoged">
+                <button class="btn btn-danger btn-sm" (click)="borrar(Proyecto.id)">
+                    <i class="bi bi-trash-fill"></i> BORRAR
+                </button>
+            </p>
+        </ul>
     </div>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-success btn-sm" routerLink="/nuevopro" *ngIf="isLoged">
+            AGREGAR PROYECTO
+        </button>
+    </div>
+
 </div>

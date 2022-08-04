@@ -1,1 +1,23 @@
-<p>editproyecto works!</p>
+<div class="container" *ngIf="proyecto">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombreP">Nombre del proyecto</label>
+                    <input type="text" class="form-control" id="nombreP" name="nombreP" [(ngModel)]="proyecto.nombreP" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcionP">Descripcion del proyecto</label>
+                    <input type="text" class="form-control" id="descripcionP" name="descripcionP" [(ngModel)]="proyecto.descripcionP" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcionP">URL de la imágen del proyecto</label>
+                    <input type="text" class="form-control" id="imgP" name="imgP" [(ngModel)]="proyecto.imgP" required>
+                </div>
+                <button class="btn btn-success">
+                    Editar Proyecto
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
