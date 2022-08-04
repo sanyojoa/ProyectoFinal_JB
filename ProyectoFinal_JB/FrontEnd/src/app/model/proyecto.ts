@@ -7,6 +7,6 @@ export class Proyecto {
     constructor(nombreP: string, descripcionP: string, imgP: string){
         this.nombreP = nombreP;
         this.descripcionP = descripcionP;
-        this.imgP;
+        this.imgP= imgP;
     }
 }
