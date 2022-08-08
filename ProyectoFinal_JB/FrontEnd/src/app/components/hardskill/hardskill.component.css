@@ -6,3 +6,12 @@ h1{
     text-shadow: 8px 3px 5px #01b7ff;
     font-weight: bold;
 }
+
+.col-lg-2{
+    margin: auto;
+}
+
+.img{
+    position: absolute;
+    z-index: 1000;
+}
