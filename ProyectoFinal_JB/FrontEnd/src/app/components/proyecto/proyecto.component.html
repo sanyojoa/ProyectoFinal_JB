@@ -7,6 +7,9 @@
                 <h2 class="font2">{{Proyecto.nombreP}}</h2>
             </li>
             <p>{{Proyecto.descripcionP}}</p>
+            <button class="btn btn-dark btn-sm">
+                <a href="{{Proyecto.urlP}}">Visitar</a>
+            </button>
             <img src="{{Proyecto.imgP}}" class="img-proyecto">
             <p *ngIf="isLoged">
                 <button class="btn btn-dark btn-sm" routerLink="/editpro/{{Proyecto.id}}">
