@@ -1,65 +1,30 @@
 <div class="row">
-    <h1 class="font1">HARD & SKILL SOFT</h1>
-    <div class="text-center col-sm-6 col-md-4 col-lg4">
-        <circle-progress [percent]="95" [radius]="100" [imageSrc]="'../assets/html.png'" [showImage]="true"
-            [imageHeight]="70" [imageWidth]="75" [outerStrokeWidth]="14" [innerStrokeWidth]="4"
-            [outerStrokeColor]="'#00f'" [innerStrokeColor]="'#b38bff'" [animation]="true" [animationDuration]="800">
-        </circle-progress>
-        <h4>HTML5</h4>
-    </div>
-    <div class="text-center col-sm-6 col-md-4 col-lg4">
-        <circle-progress [percent]="90" [radius]="100" [imageSrc]="'../assets/css.png'" [showImage]="true"
-            [imageHeight]="60" [imageWidth]="50" [outerStrokeWidth]="14" [innerStrokeWidth]="4"
-            [outerStrokeColor]="'#00f'" [innerStrokeColor]="'#b38bff'" [animation]="true" [animationDuration]="800">
-        </circle-progress>
-        <h4>CSS3</h4>
-    </div>
-    <div class="text-center col-sm-6 col-md-4 col-lg4">
-        <circle-progress [percent]="80" [radius]="100" [imageSrc]="'../assets/js.png'" [showImage]="true"
-            [imageHeight]="55" [imageWidth]="55" [outerStrokeWidth]="14" [innerStrokeWidth]="4"
-            [outerStrokeColor]="'#00f'" [innerStrokeColor]="'#b38bff'" [animation]="true" [animationDuration]="800">
-        </circle-progress>
-        <h4>JS-TS</h4>
-    </div>
-    <div class="text-center col-sm-6 col-md-4 col-lg4">
-        <circle-progress [percent]="75" [radius]="100" [imageSrc]="'../assets/git.png'" [showImage]="true"
-            [imageHeight]="70" [imageWidth]="80" [outerStrokeWidth]="14" [innerStrokeWidth]="4"
-            [outerStrokeColor]="'#00f'" [innerStrokeColor]="'#b38bff'" [animation]="true" [animationDuration]="800">
-        </circle-progress>
-        <h4>GITHUB</h4>
-    </div>
-    <div class="text-center col-sm-6 col-md-4 col-lg4">
-        <circle-progress [percent]="100" [radius]="100" [imageSrc]="'../assets/equipo.png'" [showImage]="true"
-            [imageHeight]="70" [imageWidth]="70" [outerStrokeWidth]="14" [innerStrokeWidth]="4"
-            [outerStrokeColor]="'#00f'" [innerStrokeColor]="'#b38bff'" [animation]="true" [animationDuration]="800">
-        </circle-progress>
-        <h4>TRABAJO EN EQUIPO</h4>
-    </div>
-    <div class="text-center col-sm-6 col-md-4 col-lg4">
-        <circle-progress [percent]="96" [radius]="100" [imageSrc]="'../assets/pensamiento.jpg'" [showImage]="true"
-            [imageHeight]="80" [imageWidth]="80" [outerStrokeWidth]="14" [innerStrokeWidth]="4"
-            [outerStrokeColor]="'#00f'" [innerStrokeColor]="'#b38bff'" [animation]="true" [animationDuration]="800">
-        </circle-progress>
-        <h4>PENSAMIENTO CRITICO</h4>
-    </div>
-    <div *ngFor="let Skill of skill">
-        <div class="text-center col-sm-6 col-md-4 col-lg4">
-            <circle-progress [percent]="90" [radius]="100" [title]="'{{Skill.nombreS}}'"
-                [imageHeight]="70" [imageWidth]="75" [outerStrokeWidth]="14" [innerStrokeWidth]="4"
-                [outerStrokeColor]="'#00f'" [innerStrokeColor]="'#b38bff'" [animation]="true" [animationDuration]="800">
-            </circle-progress>
-            <h4>{{Skill.nombreS}}</h4>
-            <p *ngIf="isLoged">
-                <button class="btn btn-dark btn-sm" routerLink="/editskill/{{Skill.id}}">
-                    <p class="bi bi-pencil-fill"></p> EDITAR
-                </button>
-            </p>
-            <p *ngIf="isLoged">
-                <button class="btn btn-danger btn-sm" (click)="borrar(Skill.id)">
-                    <p class="bi bi-trash-fill"></p> BORRAR
-                </button>
-            </p>
+    <h1 class="font1">HARD SKILL & SOFT</h1>
+    <div class="text-center col-sm-6 col-md-4 col-lg4" *ngFor="let Skill of skill">
+        <div class="container">
+            <div class="card">
+                <div class="percent" style="--clr:#ff00be; --num:{{Skill.porcentajeS}};">
+                    <div class="dot"></div>
+                    <svg>
+                        <circle cx="70" cy="70" r="70"></circle>
+                        <circle cx="70" cy="70" r="70"></circle>
+                    </svg>
+                    <div class="number">
+                        <h2>{{Skill.porcentajeS}}<span>%</span></h2>
+                        <p>{{Skill.nombreS}}</p>
+                    </div>
+                </div>
+            </div>
         </div>
+        <p *ngIf="isLoged">
+            <button class="btn btn-dark btn-sm" routerLink="/editskill/{{Skill.id}}">
+                <i class="bi bi-pencil-fill"></i> EDITAR
+            </button>
+        </p>
+        <p *ngIf="isLoged">
+            <button class="btn btn-danger btn-sm" (click)="borrar(Skill.id)">
+                <i class="bi bi-trash-fill"></i> BORRAR</button>
+        </p>
     </div>
     <div class="col-lg-2">
         <button type="button" class="btn btn-success btn-sm" routerLink="/nuevaskill" *ngIf="isLoged">
