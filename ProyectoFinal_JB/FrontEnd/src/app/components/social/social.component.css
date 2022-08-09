@@ -8,6 +8,11 @@ div a,button{
 
 img:hover{
     border:solid 4px #01b7ff;
+    box-shadow: 0 0 10px #00b3ff,
+    0 0 20px #00b3ff,
+    0 0 40px #00b3ff,
+    0 0 80px #00b3ff,
+    0 0 120px #00b3ff;
     transition: 0.4s;
     border-radius: 50%;
 }

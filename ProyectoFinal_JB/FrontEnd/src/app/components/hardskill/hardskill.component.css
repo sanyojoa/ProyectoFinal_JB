@@ -1,14 +1,17 @@
 .row{
-    background: #ddd;
     padding: 20px;
-}
-h1{
-    text-shadow: 8px 3px 5px #01b7ff;
-    font-weight: bold;
+    justify-content: center;
+    align-items: center;
 }
 
-div .col-lg-2{
+.col-lg-2{
     margin: auto;
+}
+.box-text-center{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .container{
@@ -142,4 +145,53 @@ div .col-lg-2{
     font-size: 0.75em;
     letter-spacing: 2px;
     text-transform: uppercase;
+}
+
+.box{
+    position: relative;
+    width: 300px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+.box h1{
+    font-size: 2.5em;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px #00b3ff,
+    0 0 20px #00b3ff,
+    0 0 40px #00b3ff,
+    0 0 80px #00b3ff,
+    0 0 120px #00b3ff;
+}
+
+.lightbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+    border-radius: 10px;
+    background: #eee;
+    z-index: 2;
+    box-shadow: 0 0 10px #00b3ff,
+    0 0 20px #00b3ff,
+    0 0 40px #00b3ff,
+    0 0 80px #00b3ff,
+    0 0 120px #00b3ff;
+    animation: animatelightbar 5s linear infinite;
+}
+
+@keyframes animatelightbar{
+    0%,5%{
+        transform: scaleY(0) translateX(0); 
+    }
+    10%{
+        transform: scaleY(1) translateX(0); 
+    }
+    90%{
+        transform: scaleY(1) translateX(calc(300px - 10px)); 
+    }
+    95%,100%{
+        transform: scaleY(0) translateX(calc(300px - 10px)); 
+    }
 }
