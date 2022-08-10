@@ -40,5 +40,9 @@ span h1{
     }
 }
 
+.botonEditar{
+    position: relative;
+    transform: translate(150px);
+}
 
 

@@ -1,0 +1,15 @@
+<div class="container" *ngIf="persona">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="img">Foto de peril</label>
+                    <input type="text" class="form-control" id="img" name="img" [(ngModel)]="persona.img" required>
+                </div>
+                <button class="btn btn-success">
+                    Editar Perfil
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
