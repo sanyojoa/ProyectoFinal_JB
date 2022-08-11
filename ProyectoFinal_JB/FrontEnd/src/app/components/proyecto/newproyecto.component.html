@@ -1,6 +1,7 @@
+<section class="vh-200">
 <div class="container">
     <div class="row">
-        <div>
+        <div id="caja">
             <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
                 <div class="form-group">
                     <label for="nombreP">Nombre del proyecto</label>
@@ -18,10 +19,11 @@
                     <label for="urlP">Url del proyecto</label>
                     <input type="text" class="form-control" id="urlP" name="urlP" [(ngModel)]="urlP" required>
                 </div>
-                <button class="btn btn-success">
+                <button class="btn btn-secondary">
                     Agregar Proyecto
                 </button>
             </form>
         </div>
     </div>
 </div>
+</section>

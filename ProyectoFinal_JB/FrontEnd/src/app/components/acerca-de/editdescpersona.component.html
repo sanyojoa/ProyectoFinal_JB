@@ -1,15 +1,17 @@
+<section class="vh-200">
 <div class="container" *ngIf="persona">
     <div class="row">
-        <div>
+        <div id="caja">
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                 <div class="form-group">
                     <label for="sobremi">Acerca de mi</label>
                     <input type="text" class="form-control" id="sobremi" name="sobremi" [(ngModel)]="persona.sobremi" required>
                 </div>
-                <button class="btn btn-success">
+                <button class="btn btn-secondary">
                     Editar Perfil
                 </button>
             </form>
         </div>
     </div>
 </div>
+</section>
